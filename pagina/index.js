@@ -5,7 +5,7 @@ const myMenu = new Map([
     ["Mandioquinha", 15.00],
     ["Isca de Frangos", 25.00],
     ["Porção de contra filé", 38.00],
-    ["Porção de Picanha ", 50.00],
+    ["Porção de Picanha", 50.00],
     ["Bolinho de Siri", 22.00],
     ["Isca de Peixe", 25.00],
     ["Camarões Fritos", 30.00],
@@ -23,9 +23,13 @@ const myMenu = new Map([
     ["Tigela 500ml (2 sabores)", 12.00],
     ["Salada de Frutas doce", 14.00],
 ])
-
-let carrinho = 0;
-let valor; 
-
-const btnTabuaFrio = document.getElementById("tabuaFrios");
-console.log(btnTabuaFrio.value);
+let searchArray = ["Tábua de frios", "Tábua Quente", "Porção Batata Frita", "Mandioquinha", "Isca de Frangos", "Porção de contra filé", "Porção de Picanha", "Bolinho de Siri", "Isca de Peixe", "Camarões Fritos", "Caranguejo", "Coca-cola 600ml", "Guaraná Antarctica lata", "Fanta Laranja 600ml", "Jarra de Suco 1L", "brahma 473ml", "Corona long neck", "Heineken long neck", "Ballantine's", "Red Label", "Royal Salute", "Sorvete"]
+ 
+function searchBtn() {
+    let pesquisa = document.getElementById("searchInput").value;
+    if (searchArray.indexOf(pesquisa.toLowerCase()) > -1) {
+        alert("temos")
+    } else {
+        alert("Desculpe, não temos esse item! :(")
+        }
+    }
