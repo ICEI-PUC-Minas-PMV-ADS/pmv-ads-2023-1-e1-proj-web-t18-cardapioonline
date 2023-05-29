@@ -23,13 +23,51 @@ const myMenu = new Map([
     ["Tigela 500ml (2 sabores)", 12.00],
     ["Salada de Frutas doce", 14.00],
 ])
-let searchArray = ["Tábua de frios", "Tábua Quente", "Porção Batata Frita", "Mandioquinha", "Isca de Frangos", "Porção de contra filé", "Porção de Picanha", "Bolinho de Siri", "Isca de Peixe", "Camarões Fritos", "Caranguejo", "Coca-cola 600ml", "Guaraná Antarctica lata", "Fanta Laranja 600ml", "Jarra de Suco 1L", "brahma 473ml", "Corona long neck", "Heineken long neck", "Ballantine's", "Red Label", "Royal Salute", "Sorvete"]
+//let searchArray = ["tábua de frios", "tabua de frios", "tábua quente", "tabua quente", "porção batata frita", "mandioquinha", "isca de frangos", "porção de contra filé", "porção de picanha", "bolinho de siri", "isca de peixe", "camarões fritos", "caranguejo", "coca-cola", "guaraná antarctica", "fanta laranja", "jarra de suco", "suco", "brahma", "corona ", "heineken", "whisky", "sorvete"]
  
 function searchBtn() {
     let pesquisa = document.getElementById("searchInput").value;
-    if (searchArray.indexOf(pesquisa.toLowerCase()) > -1) {
-        alert("temos")
+     
+    if (pesquisa == "") {
+        alert("Por favor digite o que deseja procurar!");
+    } else if (pesquisa == "tábua de frios" || pesquisa == "tabua de frios") {
+        alert();
+    } else if (pesquisa == "tábua quente" || pesquisa == "tabua quente") {
+        alert();
+    } else if (pesquisa == "porção batata frita") {
+        alert();
+    } else if (pesquisa == "mandioquinha" || pesquisa == "mandicoca" || pesquisa == "Mandioca") {
+        alert();
+    } else if (pesquisa == "porção de contra filé") {
+        alert();
+    } else if (pesquisa == "porção de picanha") {
+        alert();
+    } else if (pesquisa == "bolinho de siri") {
+        alert();
+    } else if (pesquisa == "isca de peixe") {
+        alert();
+    } else if (pesquisa == "camarões fritos" || pesquisa == "camaroes fritos") {
+        alert();
+    } else if (pesquisa == "caranguejo" || pesquisa == "carangueijo" || pesquisa == "Caranguejo") {
+        alert();
+    } else if (pesquisa == "coca-cola" || pesquisa == "refrigerante" || pesquisa == "Refrigerante") {
+        alert();
+    } else if (pesquisa == "fanta laranja" || pesquisa == "fanta" || pesquisa == "Fanta") {
+        alert();
+    } else if (pesquisa == "jarra de suco" || pesquisa == "Suco" || pesquisa == "suco") {
+        alert();
+    } else if (pesquisa == "brahma" || pesquisa == "cerveja" || pesquisa == "Cerveja") {
+        alert();
+    } else if (pesquisa == "corona") {
+        alert();
+    } else if (pesquisa == "heineken") {
+        alert();
+    } else if (pesquisa == "whisky") {
+        alert();
+    } else if (pesquisa == "sorvete") {
+        alert();
     } else {
         alert("Desculpe, não temos esse item! :(")
-        }
+        return false;
     }
+}

@@ -24,10 +24,52 @@
                 </a>
             </div>
             <div class="col-sm-auto">
-                <button class="btn btn-secondary m-0 p-0">
+                <button class="btn btn-secondary m-0 p-0" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasLogin" aria-controls="offcanvasLogin">
                     <a class="nav-link text-light" href="#">LOGIN</a>
                 </button>
-            </div>                                      
+            </div>  
+            <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasLogin" aria-labelledby="offcanvasLogin">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title text-warning" id="offcanvasLogin">Cadastro</h5>
+                </div>
+                <div class="offcanvas-body text-warning">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Nome:</label>
+                            <input type="name" class="form-control" id="userloginName" aria-describedby="emailHelp" placeholder="Digite seu nome todo!">
+                            <div id="nameHelp" class="form-text">Usaremos o nome que colocou acima para te identificar em nosso restaurante!</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Número:</label>
+                            <input type="number" class="form-control" id="userloginNumber" placeholder="Digite seu número de celular!">
+                            <div id="numberHelp" class="form-text">Caso seja necessário entraremos em contanto pelo whatsapp!</div>
+                        </div>
+                        <div class="mb-3">
+                            <label>Selecione sua mesa:</label>
+                            <div class="form-floating">
+                                <select class="form-select bg-dark text-warning" id="selectTable">
+                                    <option selected></option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                                <label for="selectTable" class="text-warning">Sua mesa:</label>
+                            <div id="tableHelp" class="form-text">O pedido será entregue na mesa apontada acima!</div>
+                        </div>
+                        <button id="btnloginSubmit" type="submit" class="btn btn-primary mt-2">CADASTRAR</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </nav>
     <nav class="navbar navbar-expand-md sticky-top bg-dark p-2">
