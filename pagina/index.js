@@ -1,3 +1,9 @@
+const btnloginSubmit = document.getElementById("btnloginSubmit");
+const loginName = document.getElementById("userloginName");
+const loginNumber = document.getElementById("userloginNumber");
+const loginTable = document.getElementById("selectTable");
+const usernameShow = document.getElementById("usernameShow");
+
 const myMenu = new Map([
     ["Tábua de frios", 16.00],
     ["Tábua Quente", 19.00],
@@ -71,3 +77,21 @@ function searchBtn() {
         return false;
     }
 }
+
+class cliente {
+    constructor(nome, numero, mesa) {
+        this.nome = nome;
+        this.numero = numero;
+        this.mesa = mesa;
+    }
+}
+
+
+btnloginSubmit.addEventListener("click", () => {
+    const loginCliente = new cliente(loginName.value, loginNumber.value, loginTable.value);
+    usernameShow.textContent = `Olá ${loginCliente.nome}`;
+    console.log(loginCliente.nome);
+    console.log(loginCliente.numero);
+    console.log(loginCliente.mesa);
+})
+ 
