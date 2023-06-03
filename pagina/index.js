@@ -3,80 +3,7 @@ const loginName = document.getElementById("userloginName");
 const loginNumber = document.getElementById("userloginNumber");
 const loginTable = document.getElementById("selectTable");
 const usernameShow = document.getElementById("usernameShow");
-
-const myMenu = new Map([
-    ["Tábua de frios", 16.00],
-    ["Tábua Quente", 19.00],
-    ["Porção Batata Frita", 20.00],
-    ["Mandioquinha", 15.00],
-    ["Isca de Frangos", 25.00],
-    ["Porção de contra filé", 38.00],
-    ["Porção de Picanha", 50.00],
-    ["Bolinho de Siri", 22.00],
-    ["Isca de Peixe", 25.00],
-    ["Camarões Fritos", 30.00],
-    ["Caranguejo", 38.00],
-    ["Coca-cola 600ml", 7.00],
-    ["Guaraná Antarctica lata", 6.00],
-    ["Fanta Laranja 600ml", 5.00],
-    ["Jarra de Suco 1L", 15.00],
-    ["brahma 473ml", 5.00],
-    ["Corona long neck", 7.00],
-    ["Heineken long neck", 9.00],
-    ["Ballantine's", 17.00],
-    ["Red Label", 14.00],
-    ["Royal Salute", 76.00],
-    ["Tigela 500ml (2 sabores)", 12.00],
-    ["Salada de Frutas doce", 14.00],
-])
-//let searchArray = ["tábua de frios", "tabua de frios", "tábua quente", "tabua quente", "porção batata frita", "mandioquinha", "isca de frangos", "porção de contra filé", "porção de picanha", "bolinho de siri", "isca de peixe", "camarões fritos", "caranguejo", "coca-cola", "guaraná antarctica", "fanta laranja", "jarra de suco", "suco", "brahma", "corona ", "heineken", "whisky", "sorvete"]
- 
-function searchBtn() {
-    let pesquisa = document.getElementById("searchInput").value;
-     
-    if (pesquisa == "") {
-        alert("Por favor digite o que deseja procurar!");
-    } else if (pesquisa == "tábua de frios" || pesquisa == "tabua de frios") {
-        alert();
-    } else if (pesquisa == "tábua quente" || pesquisa == "tabua quente") {
-        alert();
-    } else if (pesquisa == "porção batata frita") {
-        alert();
-    } else if (pesquisa == "mandioquinha" || pesquisa == "mandicoca" || pesquisa == "Mandioca") {
-        alert();
-    } else if (pesquisa == "porção de contra filé") {
-        alert();
-    } else if (pesquisa == "porção de picanha") {
-        alert();
-    } else if (pesquisa == "bolinho de siri") {
-        alert();
-    } else if (pesquisa == "isca de peixe") {
-        alert();
-    } else if (pesquisa == "camarões fritos" || pesquisa == "camaroes fritos") {
-        alert();
-    } else if (pesquisa == "caranguejo" || pesquisa == "carangueijo" || pesquisa == "Caranguejo") {
-        alert();
-    } else if (pesquisa == "coca-cola" || pesquisa == "refrigerante" || pesquisa == "Refrigerante") {
-        alert();
-    } else if (pesquisa == "fanta laranja" || pesquisa == "fanta" || pesquisa == "Fanta") {
-        alert();
-    } else if (pesquisa == "jarra de suco" || pesquisa == "Suco" || pesquisa == "suco") {
-        alert();
-    } else if (pesquisa == "brahma" || pesquisa == "cerveja" || pesquisa == "Cerveja") {
-        alert();
-    } else if (pesquisa == "corona") {
-        alert();
-    } else if (pesquisa == "heineken") {
-        alert();
-    } else if (pesquisa == "whisky") {
-        alert();
-    } else if (pesquisa == "sorvete") {
-        alert();
-    } else {
-        alert("Desculpe, não temos esse item! :(")
-        return false;
-    }
-}
+const loginBtn = document.getElementById("loginBtn");
 
 class cliente {
     constructor(nome, numero, mesa) {
@@ -86,12 +13,52 @@ class cliente {
     }
 }
 
-
 btnloginSubmit.addEventListener("click", () => {
     const loginCliente = new cliente(loginName.value, loginNumber.value, loginTable.value);
-    usernameShow.textContent = `Olá ${loginCliente.nome}`;
-    console.log(loginCliente.nome);
-    console.log(loginCliente.numero);
-    console.log(loginCliente.mesa);
-})
+    usernameShow.textContent = `Olá ${loginCliente.nome} :)`;
+    loginBtn.setAttribute("disabled", true);
+});
+
+const addToCartButtons = document.getElementsByClassName("product");
+for (var i = 0; i < addToCartButtons.length; i++) {
+    addToCartButtons[i].addEventListener("click", addProductToCart )
+}
+
+function addProductToCart(event){
+    const button = event.target;
+    const productInfos = button.parentElement;
+    const productImage = productInfos.getElementsByClassName("product-image")[0].src;
+    const productTitle = productInfos.getElementsByClassName("product-title")[0].innerText;
+    const productPrice = productInfos.getElementsByClassName("product-price")[0].innerText
+
+    const produtcsCartName = document.getElementsByClassName("cart-product-title");
+    for (var i = 0; i < produtcsCartName.length; i++) {
+        if (produtcsCartName[i].innerText === productTitle) {
+            produtcsCartName[i].parentElement.parentElement.getElementsByClassName("product-qtd-input")[0].value++;
+            return
+        }
+    }
+
+    let newCartProduct = document.createElement("tr");
+    newCartProduct.classList.add("cart-product");
+
+    newCartProduct.innerHTML = 
+    `
+    <td class="product-identification">
+        <img src=${productImage} alt="${productTitle}" width="40px" height="40px">
+        <strong class="text-warning me-1 cart-product-title">${productTitle}</strong>
+    </td>
+    <td>
+        <span class="text-warning">${productPrice}</span>
+    </td>
+    <td>
+        <input type="number" value="1" min="0" class="input-group mt-2 rounded small product-qtd-input">
+        <button type="button" class="btn btn-primary">Remover</button> 
+    </td>
+    `
+
+    const tableBody = document.getElementById("carrinhoArea");
+    tableBody.append(newCartProduct);
+}
+ 
  
