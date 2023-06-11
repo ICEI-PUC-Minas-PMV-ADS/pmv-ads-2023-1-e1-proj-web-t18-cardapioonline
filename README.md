@@ -12,16 +12,14 @@ Projeto em HTML, CSS e JavaScript demonstrando um cardápio online de um restaur
 
 * César Pereira dos Santos Filho
 * Gustavo Berto Dias
-* Nome completo do aluno 3
-* Nome completo do aluno 4
 
 ## Orientador
 
-* Diego Silva Caldeira Rocha
+* Clóvis Lemos Tavares
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+Não é necessário a instalação de nada, apenas abrir e usar. Desenvolvido primeiramente para celular.
 
 # Documentação
 
