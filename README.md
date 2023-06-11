@@ -6,7 +6,7 @@
 
 `EIXO-1`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Projeto em HTML, CSS e JavaScript demonstrando um cardápio online de um restaurante fictício.
 
 ## Integrantes
 
