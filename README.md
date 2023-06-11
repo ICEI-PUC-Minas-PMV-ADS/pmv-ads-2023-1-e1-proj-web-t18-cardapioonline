@@ -11,7 +11,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 ## Integrantes
 
 * César Pereira dos Santos Filho
-* Nome completo do aluno 2
+* Gustavo Berto Dias
 * Nome completo do aluno 3
 * Nome completo do aluno 4
 
