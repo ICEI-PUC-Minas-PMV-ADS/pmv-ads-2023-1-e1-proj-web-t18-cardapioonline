@@ -76,3 +76,5 @@ for(var i = 0; i < cartProducts.length; i++) {
     console.log(productPrice)
     totalAmount = totalAmount + (productPrice * productQuantity);
 }
+
+console.log()
