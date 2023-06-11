@@ -3,3 +3,58 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
+.navbar-expand {
+    background-color: #C58940;
+}
+
+.row {
+    background-color: #FAF8F1;
+}
+
+.container-fluid {
+    background-color: #C58940;
+}
+
+.col {
+    background-color: #FAF8F1;
+}
+
+.btn {
+     background-color: #C58940;
+     border-width: 2px;
+     border-style: solid;
+     border-color: #E5BA73;
+}
+
+.me-2 {
+    background-color: black;
+}
+
+.navbar-brand {
+    background-color: #FAF8F1;
+    margin:2px;
+    border-radius:7px;
+}
+
+.text-center {
+    background-color: #C58940;
+}
+
+h4 {
+    background-color: #FAF8F1;
+}
+
+h2 {
+    background-color: #FAF8F1;
+}
+
+
+p {
+    background-color: #FAF8F1;
+}
+
+
+.container {
+     background-color: #FAEAB1;
+}
