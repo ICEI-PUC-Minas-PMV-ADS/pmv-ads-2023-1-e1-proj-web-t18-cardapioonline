@@ -43,7 +43,7 @@ async function addProductToCart(event){
     newCartProduct.classList.add("cart-product");
 
     newCartProduct.innerHTML =
-    .
+    
     <><td class="product-identification">
             <img src $ {...productImage} alt="${productTitle}" width="40px" height="40px">
                 <strong class="text-warning me-1 cart-product-title">${productTitle}</strong>
@@ -53,7 +53,7 @@ async function addProductToCart(event){
                 <input type="number" value="1" min="0" class="rounded small product-qtd-input">
                     <button type="button" class="remove-product-button btn btn-primary">Remover</button>
                 </></td></>
-    .
+    
 
     const tableBody = document.getElementById("carrinhoArea");
     tableBody.append(newCartProduct);
