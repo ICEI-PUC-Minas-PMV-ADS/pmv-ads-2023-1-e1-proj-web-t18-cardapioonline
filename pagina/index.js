@@ -4,6 +4,8 @@ if (document.readyState === "loading") {
     ready();
 }
 
+var totalAmount = "00,00"
+
 const btnloginSubmit = document.getElementById("btnloginSubmit");
 const loginName = document.getElementById("userloginName");
 const loginNumber = document.getElementById("userloginNumber");
@@ -26,22 +28,52 @@ btnloginSubmit.addEventListener("click", () => {
 });
 
 function ready() {
-    
+
     const removeProductButtons = document.getElementsByClassName("remove-product-button");
     for (var i = 0; i < removeProductButtons.length; i++) {
         removeProductButtons[i].addEventListener("click", removeProduct)
-    
+
     }
 
     const quantityInputs = document.getElementsByClassName("product-qtd-input");
     for (var i = 0; i < quantityInputs.length; i++) {
-        quantityInputs[i].addEventListener("change", updateTotal);
+        quantityInputs[i].addEventListener("change", checkIfInputIsNull);
     }
 
     const addToCartButtons = document.getElementsByClassName("product");
     for (var i = 0; i < addToCartButtons.length; i++) {
         addToCartButtons[i].addEventListener("click", addProductToCart)
     }
+
+    const purchaseButton = document.getElementsByClassName("purchase-button")[0];
+    purchaseButton.addEventListener("click", makePurchase);
+}
+
+function makePurchase() {
+    if (totalAmount === "00,00") {
+        alert("Seu carrinho esta vazio!!")
+    } if (loginCliente.nome == null) {
+        alert("Por favor faça login primeiramente!")
+    } else {
+        alert(
+            `Obrigado pelo pedido ${loginCliente.nome}.
+            Você pode acompanhar mais detalhes do seu pedido na aba PEDIDOS.
+            Tenha um ótimo apetite.
+            `
+        )
+
+        document.querySelector(".table tbody").innerHTML = "";
+        updateTotal();
+    }
+
+}
+
+function checkIfInputIsNull(event) {
+    if (event.target.value === "0") {
+        event.target.parentElement.parentElement.remove();
+    }
+
+    updateTotal();
 }
 
 function addProductToCart(event) {
@@ -63,7 +95,6 @@ function addProductToCart(event) {
     newCartProduct.classList.add("cart-product");
 
     newCartProduct.innerHTML =
-<<<<<<< HEAD
         `
     <td class="product-identification">
         <img src=${productImage} alt=${productTitle} width="40px" height="40px">
@@ -77,22 +108,14 @@ function addProductToCart(event) {
         <button type="button" class="remove-product-button btn btn-primary">Remover</button>
     </td>
     `
-=======
-    
-    <><td class="product-identification">
-            <img src $ {...productImage} alt="${productTitle}" width="40px" height="40px">
-                <strong class="text-warning me-1 cart-product-title">${productTitle}</strong>
-            </></td><td>
-                <span class="text-warning cart-product-price">${productPrice}</span>
-            </td><td>
-                <input type="number" value="1" min="0" class="rounded small product-qtd-input">
-                    <button type="button" class="remove-product-button btn btn-primary">Remover</button>
-                </></td></>
-    
->>>>>>> 1e8af3adf8740a29624a4ea1e61c5a2945955f30
 
     const tableBody = document.getElementById("carrinhoArea");
     tableBody.append(newCartProduct);
+
+    updateTotal();
+    console.log(newCartProduct);
+    newCartProduct.getElementsByClassName("product-qtd-input")[0].addEventListener("change", checkIfInputIsNull);
+    newCartProduct.getElementsByClassName("remove-product-button")[0].addEventListener("click", removeProduct);
 }
 
 function removeProduct(event) {
@@ -101,9 +124,9 @@ function removeProduct(event) {
 }
 
 function updateTotal() {
-    let totalAmount = 0;
+    totalAmount = 0;
     const cartProducts = document.getElementsByClassName("cart-product")
-    for(var i = 0; i < cartProducts.length; i++) {
+    for (var i = 0; i < cartProducts.length; i++) {
         const productPrice = cartProducts[i].getElementsByClassName("cart-product-price")[0].innerText.replace("R$", "").replace(",", ".");
         const productQuantity = cartProducts[i].getElementsByClassName("product-qtd-input")[0].value;
         totalAmount += productPrice * productQuantity;
