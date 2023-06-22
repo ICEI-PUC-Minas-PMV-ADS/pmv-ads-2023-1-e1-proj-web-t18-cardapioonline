@@ -1,60 +1,82 @@
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
-    margin: 0;
+    margin ;
 }
 
 .navbar-expand {
-    background-color: #C58940;
+    background-color: #006494;
 }
 
 .row {
-    background-color: #FAF8F1;
+    background-color: #001019;
 }
 
 .container-fluid {
-    background-color: #C58940;
+    background-color: #001019;
 }
 
 .col {
-    background-color: #FAF8F1;
+    background-color: #001019;
 }
 
 .btn {
-     background-color: #C58940;
+     background-color: #006494;
      border-width: 2px;
      border-style: solid;
-     border-color: #E5BA73;
+     border-color: #EAFF01;
 }
 
 .me-2 {
-    background-color: black;
+    background-color: #001019;
 }
 
 .navbar-brand {
-    background-color: #FAF8F1;
+    background-color: #EAFF01;
     margin:2px;
     border-radius:7px;
 }
 
 .text-center {
-    background-color: #C58940;
-}
-
-h4 {
-    background-color: #FAF8F1;
+    background-color: #EAFF01;
 }
 
 h2 {
-    background-color: #FAF8F1;
+    background-color: #001019;
 }
 
 
-p {
-    background-color: #FAF8F1;
+.container-center {
+     background-color: #006494;
 }
 
-
-.container {
-     background-color: #FAEAB1;
+.d-flex {
+     background-color: #EAFF01;
 }
+
+.cart-product {
+     background-color: #EAFF01;  
+}
+
+.p-1 {
+    background-color:#006494;
+}
+
+.offcanvas-body {
+    background-color: #ffff;
+}
+
+.font-monospace {
+    background-color: #006494;
+    border-radius: 7px;
+}
+
+.align-content-center {
+    background-color: #006494;
+    border-radius: 7px;
+}
+
+.navigation {
+    background-color: #EAFF01;
+}
+
