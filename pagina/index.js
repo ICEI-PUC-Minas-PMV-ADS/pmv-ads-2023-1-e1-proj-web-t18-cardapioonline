@@ -4,7 +4,7 @@ if (document.readyState === "loading") {
     ready();
 }
 
-var totalAmount = "00,00"
+let totalAmount = "00,00"
 
 const btnloginSubmit = document.getElementById("btnloginSubmit");
 const loginName = document.getElementById("userloginName");
@@ -52,20 +52,14 @@ function ready() {
 function makePurchase() {
     if (totalAmount === "00,00") {
         alert("Seu carrinho esta vazio!!")
-    } if (loginCliente.nome == null) {
-        alert("Por favor faça login primeiramente!")
+    }  else if (usernameShow.textContent === "") {
+        alert("Por favor faça Login primeiro");
     } else {
-        alert(
-            `Obrigado pelo pedido ${loginCliente.nome}.
-            Você pode acompanhar mais detalhes do seu pedido na aba PEDIDOS.
-            Tenha um ótimo apetite.
-            `
-        )
-
+        alert("Obrigado pelo Pedido. Tenha um ótimo apetite!");
+        
         document.querySelector(".table tbody").innerHTML = "";
         updateTotal();
     }
-
 }
 
 function checkIfInputIsNull(event) {
@@ -87,6 +81,7 @@ function addProductToCart(event) {
     for (var i = 0; i < produtcsCartName.length; i++) {
         if (produtcsCartName[i].innerText === productTitle) {
             produtcsCartName[i].parentElement.parentElement.getElementsByClassName("product-qtd-input")[0].value++;
+            updateTotal();
             return
         }
     }
@@ -97,14 +92,14 @@ function addProductToCart(event) {
     newCartProduct.innerHTML =
         `
     <td class="product-identification">
-        <img src=${productImage} alt=${productTitle} width="40px" height="40px">
+        <img src=${productImage} width="40px" height="40px">
         <strong class="text-warning me-1 cart-product-title">${productTitle}</strong>
     </td>
     <td>
         <p class="cart-product-price text-warning">${productPrice}</p>
     </td>
     <td>
-        <input type="number" value="2" min="0" class="rounded small product-qtd-input">
+        <input type="number" value="1" min="0" class="rounded small product-qtd-input">
         <button type="button" class="remove-product-button btn btn-primary">Remover</button>
     </td>
     `
@@ -113,9 +108,9 @@ function addProductToCart(event) {
     tableBody.append(newCartProduct);
 
     updateTotal();
-    console.log(newCartProduct);
     newCartProduct.getElementsByClassName("product-qtd-input")[0].addEventListener("change", checkIfInputIsNull);
     newCartProduct.getElementsByClassName("remove-product-button")[0].addEventListener("click", removeProduct);
+    
 }
 
 function removeProduct(event) {
@@ -131,6 +126,7 @@ function updateTotal() {
         const productQuantity = cartProducts[i].getElementsByClassName("product-qtd-input")[0].value;
         totalAmount += productPrice * productQuantity;
     }
+
     totalAmount = totalAmount.toFixed(2);
     totalAmount = totalAmount.replace(".", ",")
     document.querySelector(".cart-total-container span").innerText = "R$" + totalAmount;

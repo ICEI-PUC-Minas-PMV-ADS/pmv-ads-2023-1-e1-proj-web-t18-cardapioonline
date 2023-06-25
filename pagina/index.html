@@ -77,33 +77,6 @@
             </div>
         </div>
     </nav>
-    <nav class="navbar navbar-expand-md sticky-top bg-dark p-2">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-auto">
-                    <button class="btn btn-secondary pt-auto px-4" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasStart" aria-controls="offcanvasStart">
-                            <i class="bi bi-bag"></i>
-                    </button>
-                </div>
-                <div class="col-sm-auto">
-                    <button class="btn btn-secondary px-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPedidos"
-                        aria-controls="offcanvasPedidos">
-                        <i class="bi bi-card-list"></i>
-                    </button> 
-                </div>
-                <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasPedidos" aria-labelledby="offcanvasPedidos">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title text-warning" id="offcanvasEnd">Seus Pedidos</h5>
-                    </div>
-                    <div class="offcanvas-body text-warning">
-                        <p>Até o momento você não pediu nada!</p>
-                    </div>
-                </div>               
-            </div>
-        </div>
-    </nav>
-
     <section>
         <h2 id="porçõesDIV" class="text-center text-warning mt-2">PORÇÕES</h2>
         <div class="container-fluid">
@@ -119,7 +92,7 @@
                     <h4 class="text-warning product-title">TÁBUA QUENTE:</h4>
                     <img src="/imgs/porções/comida-tabua-quente.jpg" alt="imagem da tabua quente" width="250px" height="200px" class="product-image">
                     <p class="text-warning">Esta porção é completa, composta por uma variedade de carnes vermelhas, frangos e embutidos do tipo linguiça, calabresa e salames.</p>
-                    <p class="text-warning">PREÇO:<p class="text-warning product-price">R$19.00</p></p>
+                    <p class="text-warning product-price">R$19.00</p>
                     <button type="submit" class="p-1 btn btn-success product">Adicionar no carrinho</button>
                 </div>
             </div> 
@@ -127,118 +100,175 @@
                 <div class="col">
                     <h4 class="text-warning ">PORÇÕES INDIVIDUAIS:</h4>
                     <img src="/imgs/porções/porcoes-individuais.jpg" alt="imagem da porção individual" width="250px" height="200px">
-                    <li class="text-warning mt-2">Batata Frita</li>
-                    <p class="text-warning">Uma porção de Batata frita, 500g, frito na hora e temperado. Acompanha folhas de alface e molhos.</p>
-                    <p class="text-warning product-price">PREÇO: R$ 20.00</p>
-                    <button type="submit" class="btn btn-success p-1">Adicionar no carrinho</button>
-                    <li class="text-warning mt-2">Mandioquinha</li>
-                    <p class="text-warning">Uma porção de Mandioquinha, 500g, frito na hora e temperado. Acompanha folhas de alface e molhos.</p>
-                    <p class="text-warning product-price">PREÇO: R$ 15.00</p>
-                    <button type="submit" class="btn btn-success p-1">Adicionar no carrinho</button>
-                    <li class="text-warning mt-2">Isca de Frangos</li>
-                    <p class="text-warning">Uma porção de Iscas de frangos, 500g, frito na hora e temperado. Acompanha folhas de alface e molhos.</p>
-                    <p class="text-warning product-price">PREÇO: R$ 25.00</p>
-                    <button type="submit" class="btn btn-success p-1">Adicionar no carrinho</button>
-                    <li class="text-warning mt-2">Porção de contra filé</li>
-                    <p class="text-warning">Uma porção de contra filé, 500g, frito na hora e temperado. Acompanha folhas de alface e molhos.</p>
-                    <p class="text-warning product-price">PREÇO: R$ 38.00</p>
-                    <button type="submit" class="btn btn-success p-1">Adicionar no carrinho</button>
-                    <li class="text-warning mt-2">Porção de Picanha</li>
+                    <div>
+                        <img src="/imgs/porções/porcoes-individuais.jpg" alt="imagem da porção individual" width="250px" height="200px"
+                        class="product-image imgLI">
+                        <li class="text-warning mt-2 product-title">Batata Frita</li>
+                        <p class="text-warning">Uma porção de Batata frita, 500g, frito na hora e temperado. Acompanha folhas de alface e molhos.</p>
+                        <p class="text-warning product-price">R$20.00</p>
+                        <button type="submit" class="btn btn-success p-1 product">Adicionar no carrinho</button>
+                    </div>
+                    <div>
+                        <img src="/imgs/porções/porcoes-individuais.jpg" alt="imagem da porção individual" width="250px" height="200px"
+                        class="product-image imgLI">
+                        <li class="text-warning mt-2 product-title">Mandioquinha</li>
+                        <p class="text-warning">Uma porção de Mandioquinha, 500g, frito na hora e temperado. Acompanha folhas de alface e molhos.</p>
+                        <p class="text-warning product-price">R$15.00</p>
+                        <button type="submit" class="btn btn-success p-1 product">Adicionar no carrinho</button>
+                    </div>
+                    <div>
+                        <img src="/imgs/porções/porcoes-individuais.jpg" alt="imagem da porção individual" width="250px" height="200px"
+                        class="product-image imgLI">
+                        <li class="text-warning mt-2 product-title">Isca de Frangos</li>
+                        <p class="text-warning">Uma porção de Iscas de frangos, 500g, frito na hora e temperado. Acompanha folhas de alface e molhos.</p>
+                        <p class="text-warning product-price">R$25.00</p>
+                        <button type="submit" class="btn btn-success p-1 product">Adicionar no carrinho</button>
+                    </div>
+                    <div>
+                        <img src="/imgs/porções/porcoes-individuais.jpg" alt="imagem da porção individual" width="250px" height="200px"
+                        class="product-image imgLI">
+                        <li class="text-warning mt-2 product-title">Porção de contra filé</li>
+                        <p class="text-warning">Uma porção de contra filé, 500g, frito na hora e temperado. Acompanha folhas de alface e molhos.</p>
+                        <p class="text-warning product-price">R$38.00</p>
+                        <button type="submit" class="btn btn-success p-1 product">Adicionar no carrinho</button>
+                    </div>
+                    <li class="text-warning mt-2 product-title">Porção de Picanha</li>
                     <p class="text-warning">Uma porção de Picanha, 500g, frito na hora e temperado. Acompanha folhas de alface e molhos.</p>
-                    <p class="text-warning product-price">PREÇO: R$ 50.00</p>
-                    <button type="submit" class="btn btn-success p-1">Adicionar no carrinho</button>
-                    <h2 class="text-warning mt-2">ADICIONAL</h2>
-                    <p class="text-warning">Mandioquinha e batata frita podem ser adicionados nas porções diversas por um preço adicional</p>
+                    <p class="text-warning product-price">R$50.00</p>
+                    <button type="submit" class="btn btn-success p-1 product">Adicionar no carrinho</button>
                 </div>
                 <div class="col">
-                    <h4 class="text-warning mt-2 product-title">PORÇÕES DE FRUTOS DO MAR:</h4>
-                    <img src="/imgs/porções/porcoes-frutos-do-mar.jpg" alt="imagem porção frutos do mar" width="250px" height="200px" class="product-image">
-                    <li class="text-warning mt-2">Bolinhos de Siri</li>
-                    <p class="text-warning">Uma porção de Bolinhos de Siri, 500g, frito na hora e temperado. Acompanha folhas de alface e molhos.</p>
-                    <p class="text-warning product-price">PREÇO: R$ 22.00</p>
-                    <button type="submit" class="btn btn-success p-1">Adicionar no carrinho</button>
-                    <li class="text-warning mt-2">Iscas de peixe</li>
-                    <p class="text-warning">Uma porção de Iscas de Peixe, 500g, frito na hora e temperado. Acompanha folhas de alface e molhos.</p>
-                    <p class="text-warning product-price">PREÇO: R$ 25.00</p>
-                    <button type="submit" class="btn btn-success p-1">Adicionar no carrinho</button>
-                    <li class="text-warning mt-2">Camarões fritos, à milanesa ou sequência</li>
-                    <p class="text-warning">Uma porção de Camarões fritos, 500g, frito na hora e temperado. Acompanha folhas de alface e molhos.</p>
-                    <p class="text-warning product-price">PREÇO: R$ 30.00</p>
-                    <button type="submit" class="btn btn-success p-1">Adicionar no carrinho</button>
-                    <li class="text-warning mt-2">Caranguejo</li>
-                    <p class="text-warning">Uma porção de Carangueijo, 500g, frito na hora e temperado. Acompanha folhas de alface e molhos.</p>
-                    <p class="text-warning product-price">PREÇO: R$38.00</p>
-                    <button type="submit" class="btn btn-success p-1">Adicionar no carrinho</button>
+                    <h4 class="text-warning mt-2">PORÇÕES DE FRUTOS DO MAR:</h4>
+                    <img src="/imgs/porções/porcoes-frutos-do-mar.jpg" alt="imagem porção frutos do mar" width="250px" height="200px">
+                    <div>
+                        <img src="/imgs/porções/porcoes-frutos-do-mar.jpg" alt="imagem porção frutos do mar" width="250px" height="200px" class="product-image imgLI">
+                        <li class="text-warning mt-2 product-title">Bolinhos de Siri</li>
+                        <p class="text-warning">Uma porção de Bolinhos de Siri, 500g, frito na hora e temperado. Acompanha folhas de alface e molhos.</p>
+                        <p class="text-warning product-price">R$22.00</p>
+                        <button type="submit" class="btn btn-success p-1 product">Adicionar no carrinho</button>
+                    </div>
+                    <div>
+                        <img src="/imgs/porções/porcoes-frutos-do-mar.jpg" alt="imagem porção frutos do mar" width="250px" height="200px"
+                        class="product-image imgLI">
+                        <li class="text-warning mt-2 product-title">Iscas de peixe</li>
+                        <p class="text-warning">Uma porção de Iscas de Peixe, 500g, frito na hora e temperado. Acompanha folhas de alface e molhos.</p>
+                        <p class="text-warning product-price">R$25.00</p>
+                        <button type="submit" class="btn btn-success p-1 product">Adicionar no carrinho</button>
+                    </div>
+                    <div>
+                        <img src="/imgs/porções/porcoes-frutos-do-mar.jpg" alt="imagem porção frutos do mar" width="250px" height="200px"
+                            class="product-image imgLI">
+                        <li class="text-warning mt-2 product-title">Camarões fritos, à milanesa ou sequência</li>
+                        <p class="text-warning">Uma porção de Camarões fritos, 500g, frito na hora e temperado. Acompanha folhas de alface e molhos.</p>
+                        <p class="text-warning product-price">R$30.00</p>
+                        <button type="submit" class="btn btn-success p-1 product">Adicionar no carrinho</button>
+                    </div>
+                    <div>
+                        <img src="/imgs/porções/porcoes-frutos-do-mar.jpg" alt="imagem porção frutos do mar" width="250px" height="200px"
+                        class="product-image imgLI">
+                        <li class="text-warning mt-2 product-title">Caranguejo</li>
+                        <p class="text-warning">Uma porção de Carangueijo, 500g, frito na hora e temperado. Acompanha folhas de alface e molhos.</p>
+                        <p class="text-warning product-price">R$38.00</p>
+                        <button type="submit" class="btn btn-success p-1 product">Adicionar no carrinho</button>
+                    </div>
                 </div>
         </div>
     </div>
     </section>
     <section>
-        <h2 class="text-warning text-center" id="bebidasDIV">BEBIDAS CASUAIS</h2>
+        <h2 class="text-warning text-center">BEBIDAS CASUAIS</h2>
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
-                    <h4 class="text-warning product-title">REFRIGERANTES</h4>
-                    <img src="/imgs/bebidas/refrigerante.jpg" alt="REFRIGERANTES" width="250px" height="200px" class="product-image">
-                    <ul class="mt-2">
-                        <li class="text-warning">Coca-cola 600ml</li>
-                        <p class="text-warning product-price">PREÇO: R$7:00</p>
-                        <button type="submit" class="btn btn-success p-1">Adicionar no carrinho</button>
-                        <li class="text-warning">Guaraná Antarctica lata</li>
-                        <p class="text-warning product-price">PREÇO: R$6.00</p>
-                        <button type="submit" class="btn btn-success p-1">Adicionar no carrinho</button>
-                        <li class="text-warning">Fanta Laranja 600ml</li>
-                        <p class="text-warning product-price">PREÇO: R$5.00</p>
-                        <button type="submit" class="btn btn-success p-1">Adicionar no carrinho</button>
-                    </ul>
-                </div>
+                    <h4 class="text-warning">REFRIGERANTES</h4>
+                    <img src="/imgs/bebidas/refrigerante.jpg" alt="REFRIGERANTES" width="250px" height="200px">
+                    <div>
+                        <img src="/imgs/bebidas/refrigerante.jpg" alt="REFRIGERANTES" width="250px" height="200px" class="product-image imgLI">
+                        <li class="text-warning product-title">Coca-cola 600ml</li>
+                        <p class="text-warning product-price">R$7:00</p>
+                        <button type="submit" class="btn btn-success p-1 product">Adicionar no carrinho</button>
+                    </div>
+                    <div>
+                        <img src="/imgs/bebidas/refrigerante.jpg" alt="REFRIGERANTES" width="250px" height="200px" class="product-image imgLI">
+                        <li class="text-warning product-title">Guaraná Antarctica lata</li>
+                        <p class="text-warning product-price">R$6.00</p>
+                        <button type="submit" class="btn btn-success p-1 product">Adicionar no carrinho</button>
+                    </div>
+                    <div>
+                        <img src="/imgs/bebidas/refrigerante.jpg" alt="REFRIGERANTES" width="250px" height="200px" class="product-image imgLI">
+                        <li class="text-warning product-title">Fanta Laranja 600ml</li>
+                        <p class="text-warning product-price">R$5.00</p>
+                        <button type="submit" class="btn btn-success p-1 product">Adicionar no carrinho</button>
+                    </div>
                 <div class="col">
                     <h4 class="text-warning product-title">SUCO NATURAL</h4>
-                    <img src="/imgs/bebidas/suco natural.jpg" alt="SUCO NATURAL" width="250px" height="200px" class="product-image">
-                    <ul class="text-warning">
-                        <li class="text-warning">Jarra de Suco 1L</li>
-                            <p class="text-warning product-price">PREÇO: R$ 15.00</p>
-                            <p class="text-warning">-> SABORES:</p>
-                        <li class="text-warning">Laranja</li>
-                        <button type="submit" class="btn btn-success p-1">Adicionar no carrinho</button>
-                        <li class="text-warning">Limão</li>
-                        <button type="submit" class="btn btn-success p-1">Adicionar no carrinho</button>
-                        <li class="text-warning">Maracujá</li>
-                        <button type="submit" class="btn btn-success p-1">Adicionar no carrinho</button>
-                    </ul>
+                    <img src="/imgs/bebidas/suco natural.jpg" alt="SUCO NATURAL" width="250px" height="200px">
+                        <p class="text-warning">Jarra de Suco 1L</p>
+                        <div>
+                            <img src="/imgs/bebidas/suco natural.jpg" alt="SUCO NATURAL" width="250px" height="200px" class="product-image imgLI">
+                            <li class="text-warning product-title">Jarra de Suco 1L (Laranja)</li>
+                            <p class="text-warning product-price">R$15.00</p>
+                            <button type="submit" class="btn btn-success p-1 product">Adicionar no carrinho</button>
+                        </div>
+                        <div>
+                            <img src="/imgs/bebidas/suco natural.jpg" alt="SUCO NATURAL" width="250px" height="200px" class="product-image imgLI">
+                            <li class="text-warning product-title">Jarra de Suco 1L (Limão)</li>
+                            <p class="text-warning product-price">R$15.00</p>
+                            <button type="submit" class="btn btn-success p-1 product">Adicionar no carrinho</button>
+                        </div>
+                        <div>
+                            <img src="/imgs/bebidas/suco natural.jpg" alt="SUCO NATURAL" width="250px" height="200px" class="product-image imgLI">
+                            <li class="text-warning product-title">Jarra de Suco 1L (Maracujá)</li>
+                            <p class="text-warning product-price">R$15.00</p>
+                            <button type="submit" class="btn btn-success p-1 product">Adicionar no carrinho</button>
+                        </div>
                 </div>
             </div>
             <div class="row">
                 <h2 class="text-warning text-center">BEBIDAS ALCOÓLICAS</h2>
                 <div class="col">
-                    <h4 class="text-warning product-title">CERVEJAS</h4>
-                    <img src="/imgs/bebidas/cerveja.jpg" alt="CERVEJA" width="250px" height="200px" class="product-image">
-                    <ul>
-                        <li class="text-warning mt-2">Brahma 473ml</li>
-                        <p class="text-warning product-price">PREÇO: R$5:00</p>
-                        <button type="submit" class="btn btn-success p-1">Adicionar no carrinho</button>
-                        <li class="text-warning mt-2">Corona long neck</li>
-                        <p class="text-warning product-price">PREÇO: R$7.00</p>
-                        <button type="submit" class="btn btn-success p-1">Adicionar no carrinho</button>
-                        <li class="text-warning mt-2">Heineken long neck</li>
-                        <p class="text-warning product-price">PREÇO: R$9.00</p>
-                        <button type="submit" class="btn btn-success p-1">Adicionar no carrinho</button>
-                    </ul>
+                    <h4 class="text-warning">CERVEJAS</h4>
+                    <img src="/imgs/bebidas/cerveja.jpg" alt="CERVEJA" width="250px" height="200px">
+                    <div>\
+                        <img src="/imgs/bebidas/cerveja.jpg" alt="CERVEJA" width="250px" height="200px" class="product-image imgLI">
+                        <li class="text-warning mt-2 product-title">Brahma 473ml</li>
+                        <p class="text-warning product-price">R$5:00</p>
+                        <button type="submit" class="btn btn-success p-1 product">Adicionar no carrinho</button>
+                    </div>
+                    <div>
+                        <img src="/imgs/bebidas/cerveja.jpg" alt="CERVEJA" width="250px" height="200px" class="product-image imgLI">
+                        <li class="text-warning mt-2 product-title">Corona long neck</li>
+                        <p class="text-warning product-price">R$7.00</p>
+                        <button type="submit" class="btn btn-success p-1 product">Adicionar no carrinho</button>
+                    </div>
+                    <div>
+                        <img src="/imgs/bebidas/cerveja.jpg" alt="CERVEJA" width="250px" height="200px" class="product-image imgLI">
+                        <li class="text-warning mt-2 product-title">Heineken long neck</li>
+                        <p class="text-warning product-price">R$9.00</p>
+                        <button type="submit" class="btn btn-success p-1 product">Adicionar no carrinho</button>
+                    </div>
                 </div>
                 <div class="col">
-                    <h4 class="text-warning product-title">WHISKY - DOSE</h4>
-                    <img src="/imgs/bebidas/whisky.png" alt="WHISKY" width="250px" height="200px" class="product-image">
-                    <ul>
-                        <li class="text-warning mt-2">Ballantine's</li>
-                        <p class="text-warning product-price">PREÇO: R$ 17.00</p>
-                        <button type="submit" class="btn btn-success p-1">Adicionar no carrinho</button>
-                        <li class="text-warning mt-2">Red Label</li>
-                        <p class="text-warning product-price">PREÇO: R$ 14.00</p>
-                        <button type="submit" class="btn btn-success p-1">Adicionar no carrinho</button>
-                        <li class="text-warning mt-2">Royal Salute</li>
-                        <p class="text-warning product-price">PREÇO: R$76.00</p>
-                        <button type="submit" class="btn btn-success p-1">Adicionar no carrinho</button>
-                    </ul>
+                    <h4 class="text-warning">WHISKY - DOSE</h4>
+                    <img src="/imgs/bebidas/whisky.png" alt="WHISKY" width="250px" height="200px">
+                        <div>
+                            <img src="/imgs/bebidas/whisky.png" alt="WHISKY" width="250px" height="200px" class="product-image imgLI">
+                            <li class="text-warning mt-2 product-title">Ballantine's</li>
+                            <p class="text-warning product-price">R$17.00</p>
+                            <button type="submit" class="btn btn-success p-1 product">Adicionar no carrinho</button>
+                        </div>
+                        <div>
+                            <img src="/imgs/bebidas/whisky.png" alt="WHISKY" width="250px" height="200px" class="product-image imgLI">
+                            <li class="text-warning mt-2 product-title">Red Label</li>
+                            <p class="text-warning product-price">R$14.00</p>
+                            <button type="submit" class="btn btn-success p-1 product">Adicionar no carrinho</button>
+                        </div>
+                        <div>
+                            <img src="/imgs/bebidas/whisky.png" alt="WHISKY" width="250px" height="200px" class="product-image imgLI">
+                            <li class="text-warning mt-2 product-title">Royal Salute</li>
+                            <p class="text-warning product-price">R$76.00</p>
+                            <button type="submit" class="btn btn-success p-1 product">Adicionar no carrinho</button>
+                        </div>
                     <p class="text-warning">TODOS AS DOSES ACOMPANHAM GELO SEPARADO.</p>
                 </div>
             </div>
@@ -248,27 +278,21 @@
     <section>
         <div class="container-fluid">
             <div class="row">
-                <h2 class="text-warning text-center" id="sobremesasDIV">SOBREMESAS</h2>
+                <h2 class="text-warning text-center">SOBREMESAS</h2>
                 <div class="col">
-                    <h4 class="text-warning product-title">SORVERTE</h4>
+                    <h4 class="text-warning">SORVERTE</h4>
                     <img src="/imgs/sobremesas/sorvete.jpeg" alt="SORVETE" width="250px" height="200px" class="product-image">
                     <p class="text-warning mt-2">Tigela 500ml (2 sabores)</p>
-                    <ul>
-                        <li class="text-warning">Morango</li>
-                        <li class="text-warning">Coco</li>
-                        <li class="text-warning">Chocolate</li>
-                        <li class="text-warning">Limão</li>
-                        <li class="text-warning">Flocos</li>
-                    </ul>
-                    <p class="text-warning product-price">PREÇO: R$12.00</p>
-                    <button type="submit" class="btn btn-success p-1">Adicionar no carrinho</button>
+                    <p class="text-warning product-title">SABOR Morango</p>
+                    <p class="text-warning product-price">R$12.00</p>
+                    <button type="submit" class="btn btn-success p-1 product">Adicionar no carrinho</button>
                 </div>
                 <div class="col">
                     <h4 class="text-warning product-title">SALADA DE FRUTAS</h4>
                     <img src="/imgs/sobremesas/salada de frutas.jpeg" alt="SALADA DE FRUTAS" width="250px" height="200px" class="product-image">
                     <p class="text-warning mt-2">Salada de frutas adocicada com frutas tropicais e deliciosas.</p>
-                    <p class="text-warning product-price">PREÇO: R$14.00</p>
-                    <button type="submit" class="btn btn-success p-1">Adicionar no carrinho</button>
+                    <p class="text-warning product-price">R$14.00</p>
+                    <button type="submit" class="btn btn-success p-1 product">Adicionar no carrinho</button>
                 </div>
             </div>
         </div>
@@ -283,7 +307,7 @@
             </div>
             <table class="table">
                 <tbody id="carrinhoArea">
-                    <!-- <tr class="cart-product">
+                <!-- <tr class="cart-product">
                             <td class="product-identification">
                                 <img src=/imgs/porções/comida-tabua-fria.jpg alt="TÁBUA DE FRIOS" width="40px" height="40px">
                                 <strong class="text-warning me-1 cart-product-title">TÁBUA DE FRIOS</strong>
@@ -294,7 +318,7 @@
                             <td>
                                 <input type="number" value="2" min="0" class="small rounded product-qtd-input">
                                 <button type="button" class="remove-product-button btn btn-primary">Remover</button>
-                            </td>
+                            </td> 
                         </tr> -->
                 </tbody>
             </table>

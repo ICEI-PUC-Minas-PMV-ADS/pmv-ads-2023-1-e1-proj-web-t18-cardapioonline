@@ -1,25 +1,8 @@
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
-    margin ;
+    margin: none;
 }
-
-.navbar-expand {
-    background-color: #006494;
-}
-
-.row {
-    background-color: #001019;
-}
-
-.container-fluid {
-    background-color: #001019;
-}
-
-.col {
-    background-color: #001019;
-}
-
 .btn {
      background-color: #006494;
      border-width: 2px;
@@ -27,43 +10,12 @@ input::-webkit-inner-spin-button {
      border-color: #EAFF01;
 }
 
-.me-2 {
-    background-color: #001019;
-}
-
-.navbar-brand {
-    background-color: #EAFF01;
-    margin:2px;
-    border-radius:7px;
-}
-
-.text-center {
-    background-color: #EAFF01;
-}
-
-h2 {
-    background-color: #001019;
-}
-
-
 .container-center {
      background-color: #006494;
 }
 
-.d-flex {
-     background-color: #EAFF01;
-}
-
-.cart-product {
-     background-color: #EAFF01;  
-}
-
 .p-1 {
     background-color:#006494;
-}
-
-.offcanvas-body {
-    background-color: #ffff;
 }
 
 .font-monospace {
@@ -76,7 +28,7 @@ h2 {
     border-radius: 7px;
 }
 
-.navigation {
-    background-color: #EAFF01;
+.imgLI {
+    display: none;
 }
 
